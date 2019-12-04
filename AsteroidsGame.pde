@@ -1,5 +1,6 @@
 Spaceship bob = new Spaceship();//your variable declarations here
 Star [] sue = new Star[500];
+ArrayList<Asteroid> bill = new ArrayList<Asteroid>();
 
 public void setup() 
 {
@@ -9,6 +10,10 @@ public void setup()
   {
   	sue[i] = new Star();
   }
+
+for(int i = 0; i < 10; i++)
+  bill.add(new Asteroid());
+
 }
 
 public void draw() 
@@ -22,6 +27,12 @@ public void draw()
 
   bob.show();
   bob.move();
+
+  for(int i = 0; i < bill.size(); i++)
+  {
+  bill.get(i).show();
+  bill.get(i).move();
+ }
 }
 
 public void keyPressed()
